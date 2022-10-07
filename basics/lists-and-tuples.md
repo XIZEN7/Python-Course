@@ -38,7 +38,7 @@ Aquí la variable `names` apunta a una lista, que luego apunta al string.
 Este es un ejemplo similar:
 ![List of names.](../images/people.png)
 
-## What can we do with lists?
+## ¿Que podemos hacer con las listas?
 
 Abramos el prompt `>>>` y creemos una lista de nombres.
 
