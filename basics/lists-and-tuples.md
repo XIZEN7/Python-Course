@@ -131,6 +131,8 @@ Si necesitamos eliminar todos los elementos coincidentes, podemos usar un ciclo 
 >>>
 ```
 
+## lista de Comprensión
+
 Otra cosa útil acerca de las listas es la **comprensión de listas**.
 Es una forma práctica de construir una lista en una sola línea. A menudo hace que el código sea más limpio, más corto y más fácil de leer.
 
