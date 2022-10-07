@@ -1,52 +1,41 @@
 # Definición de funciones personalizadas
 
-Probablemente ha pasado un tiempo desde que leíste sobre el uso de funciones.
-[Lea sobre esto nuevamente] (using-functions.md) si es necesario.
-
 ## ¿Por qué debo usar funciones personalizadas?
 
 Echa un vistazo a este código:
 
 ```python
 print("************")
-print("¡Hola mundo!")
+print("Hello World!")
 print("************")
 
 print("*************")
-print("Ingrese una palabra:")
+print("Enter a word:")
 print("*************")
 
-palabra = entrada()
+word = input()
 
-si palabra == 'python':
+if word == 'python':
     print("*******************")
-    print("¡Usted ingresó a Python!")
+    print("You entered Python!")
     print("*******************")
-más:
+else:
     print("**************************")
-    print("No ingresaste Python :(")
+    print("You didn't enter Python :(")
     print("**************************")
 ```
 
 Luego compáralo con este código:
 
 ```python
-print_box("¡Hola mundo!")
-print_box("Ingrese una palabra:")
-palabra = entrada()
-si palabra == 'python':
-    print_box("¡Has entrado en Python!")
-más:
-    print_box("No ingresaste Python :(")
+print_box("Hello World!")
+print_box("Enter a word:")
+word = input()
+if word == 'python':
+    print_box("You entered Python!")
+else:
+    print_box("You didn't enter Python :(")
 ```
-
-En este tutorial aprenderemos a definir una función `print_box`
-que imprime texto en un cuadro. Podemos escribir el código para print el
-cuadro una vez, y luego utilícelo varias veces en cualquier parte del programa.
-
-[Dividir un programa largo en funciones simples](larger-program.md) también
-hace que el código sea más fácil de trabajar. Si hay un problema con el código
-podemos probar las funciones una por una y encontrar el problema fácilmente.
 
 ## Primeras funciones
 
@@ -60,11 +49,11 @@ La palabra clave `pass` no hace nada.
 Usémoslo para definir una función que no hace nada.
 
 ```python
->>> def hacer_nada():
+>>> def do_nothing():
 ...     pass
 ...
->>> hacer_nada
-<función no hacer nada en 0x7f56b74e9598>
+>>> do_nothing
+<function do_nothing at 0x7f56b74e9598>
 >>>
 ```
 
@@ -79,7 +68,7 @@ la función finaliza y nos da un error de sintaxis. No necesitamos el
 Veamos qué sucede si llamamos a nuestra función.
 
 ```python
->>> hacer_nada()
+>>> do_nothing()
 >>>
 ```
 
@@ -88,35 +77,35 @@ Aquí vamos. No hizo nada en absoluto.
 ¿Tal vez podríamos hacer algo en la función en su lugar?
 
 ```python
->>> def print_hola():
-... print("¡Hola!")
+>>> def print_hi():
+...     print("Hi!")
 ...
->>> print_hola()
-¡Hola!
+>>> print_hi()
+Hi!
 >>>
 ```
 
 Esta funcionando. ¿Qué tal print una variable en la función?
 
 ```python
->>> def print_mensaje():
-... print (mensaje)
+>>> def print_message():
+...     print(message)
 ...
->>> mensaje = "¡Hola mundo!"
->>> print_mensaje()
-Hola Mundo!
+>>> message = "Hello World!"
+>>> print_message()
+Hello World!
 >>>
 ```
 
 De nuevo, funciona. ¿Qué hay de establecer una variable en la función?
 
 ```python
->>> def obtener_nombre_de_usuario():
-... nombre de usuario = entrada ("Nombre de usuario:")
+>>> def get_username():
+...     username = input("Username: ")
 ...
->>> obtener_nombre_de_usuario()
-nombre de usuario: yo
->>> nombre de usuario
+>>> get_username()
+Username: me
+>>> username
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'username' is not defined
@@ -132,14 +121,14 @@ globales porque las mismas variables están disponibles en cualquier parte de nu
 programa, incluso en funciones.
 
 ```python
->>> un = 1
->>> b = "hola"
->>> c = "hola"
+>>> a = 1
+>>> b = "hi"
+>>> c = "hello"
 >>> def print_abc():
-... print (a, b, c)
+...     print(a, b, c)
 ...
 >>> print_abc()
-1 hola hola
+1 hi hello
 >>>
 ```
 
@@ -147,13 +136,13 @@ Pero también hay **variables locales**. Solo existen **dentro**
 funciones, y se eliminan cuando la función sale.
 
 ```python
->>> def cosita():
-... d = "hola de nuevo, soy una variable local"
-... print ('cosa interior:', d)
+>>> def thingy():
+...     d = "hello again, i'm a local variable"
+...     print('inside thingy:', d)
 ...
->>> cosita()
-cosita interior: hola de nuevo, soy una variable local
->>> re
+>>> thingy()
+inside thingy: hello again, i'm a local variable
+>>> d
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'd' is not defined
@@ -167,13 +156,13 @@ Dibujemos un diagrama de estas variables:
 Sin embargo, modificar una variable global en el lugar desde una función es fácil.
 
 ```python
->>> cosas = ['cosas globales']
->>> def añadir_cosas():
-... cosas.append('cosas locales')
+>>> stuff = ['global stuff']
+>>> def add_stuff():
+...     stuff.append('local stuff')
 ...
->>> añadir_cosas()
->>> cosas
-['cosas globales', 'cosas locales']
+>>> add_stuff()
+>>> stuff
+['global stuff', 'local stuff']
 >>>
 ```
 
@@ -181,19 +170,19 @@ Esto solo funciona para cambiar en el lugar, no podemos asignar un nuevo valor a
 La variable.
 
 ```python
->>> def poner_cosas_en_algo_nuevo():
-... cosas = ['más cosas locales']
+>>> def set_stuff_to_something_new():
+...     stuff = ['more local stuff']
 ...
->>> poner_cosas_en_algo_nuevo()
->>> cosas
-['cosas globales', 'cosas locales']
+>>> set_stuff_to_something_new()
+>>> stuff
+['global stuff', 'local stuff']
 >>>
 ```
 
-## Aporte
+## Input
 
 **Nota:** Esta sección no tiene nada que ver con la función `input` que
-se usa como `palabra = entrada ("ingrese algo:")`.
+se usa como `word = input ("ingrese algo:")`.
 
 Hasta ahora nuestras funciones parecen estar realmente aisladas del resto de nuestro
 ¡código, y apesta! Pero en realidad no están tan aislados como podrías
@@ -203,9 +192,9 @@ Pensemos en lo que hace la función de print. Se necesita un argumento
 y lo imprime. ¿Quizás una función personalizada también podría tomar un argumento?
 
 ```python
->>> def print_dos veces(mensaje):
-... print (mensaje)
-... print (mensaje)
+>>> def print_twice(message):
+...     print(message)
+...     print(message)
 ...
 >>>
 ```
@@ -222,10 +211,8 @@ Esta función se puede llamar de dos maneras:
   argumentos Yo haría esto en mi código.
 
   ```python
-  >>> print_dos veces("hola")
-  hola
-  hola
+  >>> print_twice("hi")
+  hi
+  hi
   >>>
   ```
-
-  Cuando la función la estaba ejecutando

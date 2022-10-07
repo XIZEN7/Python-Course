@@ -153,9 +153,9 @@ Las cosas se calculan en el mismo orden que en matemáticas. Los paréntesis `(`
 y `)` también funcionan de la misma manera.
 
 ```python
->>> 1 + 2 * 3        # 2 * 3 Es caulculado primero
+>>> 1 + 2 * 3        # 2 * 3 Es calculado primero
 7
->>> (1 + 2) * 3      # 1 + 2 Es caulculado primero
+>>> (1 + 2) * 3      # 1 + 2 Es calculado primero
 9
 >>>
 ```
@@ -164,7 +164,7 @@ También puede omitir espacios para mostrar lo que se calcula primero. Pitón
 lo ignora, pero nuestro código será más fácil de leer para las personas.
 
 ```python
->>> 1 + 2*3         # Ahora observamos como 2*3 es caulculado primero
+>>> 1 + 2*3         # Ahora observamos como 2*3 es calculado primero
 7
 >>>
 ```

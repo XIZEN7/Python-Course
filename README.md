@@ -6,13 +6,13 @@ Este tutorial está dirigido a personas sin experiencia en programación o con m
 
 Puede usar Python 3.6 o cualquier Python más nuevo con este tutorial. No use Python 2 porque ya no es compatible.
 
-1. [Installing Python](basics/installing-python.md)
-2. [Getting started with Python](basics/getting-started.md)
-3. [Variables, Booleans and None](basics/variables.md)
-4. [If, else and elif](basics/if.md)
-5. [Lists and tuples](basics/lists-and-tuples.md)
-6. [Loops](basics/loops.md)
-7. [Dictionaries](basics/dicts.md)
-8. [Defining functions](basics/defining-functions.md)
-9. [What is true?](basics/what-is-true.md)
-10. [Classes](basics/classes.md)
+1. [Instalando Python](basics/installing-python.md)
+2. [Comencemos con Python](basics/getting-started.md)
+3. [Variables, Boolenaos y None](basics/variables.md)
+4. [If, else y tambien elif](basics/if.md)
+5. [Listas and tuplas](basics/lists-and-tuples.md)
+6. [Ciclos](basics/loops.md)
+7. [Diccionarios](basics/dicts.md)
+8. [Definiendo Funciones](basics/defining-functions.md)
+9. [Booleanos](basics/what-is-true.md)
+10. [Clases](basics/classes.md)

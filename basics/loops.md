@@ -4,7 +4,7 @@ En programación, un **bucle** significa repetir algo varias veces.
 Hay diferentes tipos de bucles:
 
 - [While loops](#while-loops) repiten algo mientras una condición es verdadera.
-- [Until loops](#until-loops) repetir algo mientras una condición es falsa.
+- [Not While](#notw-loops) repetir algo mientras una condición es falsa.
 - [For loops](#for-loops) repetir algo para cada elemento de algo.
 
 ## While loops
