@@ -16,20 +16,24 @@ Instalar Python en Windows es muy parecido a instalar cualquier otro programa.
 
 ### Mac OS X
 
-Al momento de escribir esto, las Mac no vienen con Python 3 y usted
-necesita instalarlo usted mismo. Debería ser como instalar cualquier otro
-programa, pero desafortunadamente no tengo mejores instrucciones porque
-no tengo una Mac actualizada y nunca he instalado Python en una Mac.
-Si desea escribir mejores instrucciones, [diga
-yo](../contact-me.md).
+La instalación de python en mac es:
+
+```
+Sudo brew install python
+```
 
 ## Linux
 
-Ya tienes Python 3, **no es necesario instalar nada**. Tú
-también puede tener Python 2, pero no intente eliminarlo.
-Algunos de los programas que venían con su sistema operativo
-probablemente están escritos en Python 2, por lo que eliminar Python 2 sería
-romperlos.
+Recuerde que los instaladores de paquetes varian segun la distribución de linux
+Los mas usados son:
+
+- apt(Distribuciones basadas en Debian)
+- yum(Distribuciones baadas en Fedora y Red HaT)
+- pacman(Distribuciones basadas en Arch)
+
+```
+Sudo (instalador de paquetes) install python
+```
 
 ## Ejecutando Python
 

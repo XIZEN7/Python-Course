@@ -7,7 +7,7 @@ Las variables son fáciles de entender. Simplemente **señalan valores**.
 ```python
 >>> a = 1 # crea una variable llamada a que apunte a 1
 >>> b = 2 # crea otra variable
->>> un # obtiene el valor al que apunta la variable
+>>> a # obtiene el valor al que apunta la variable
 1
 >>> segundo
 2
