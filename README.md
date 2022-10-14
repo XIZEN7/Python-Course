@@ -20,8 +20,16 @@ Instalación de librerias usadas en este repositorio
 pip install -r requirements.txt
 ```
 
+Recuerda ejecutar con jupyter o la extensión de jupyter en tu editor de código,
+los siguientes archivos
+
+```
+data.ipynb
+data2.ipynb
+```
+
 Ejecución del archivo de ejemplo
 
 ```
-python3 examply.py
+python3 example.py
 ```
