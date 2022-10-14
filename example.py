@@ -1,4 +1,7 @@
 import csv
+import numpy
+import pandas
+import tensorflow
 
 fields = ['Nombre', 'Facultad', 'Año', 'Promedio']
 
