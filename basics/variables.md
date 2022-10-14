@@ -1,5 +1,4 @@
-# Variables, Booleanos y Ninguno
-
+# Variables, Booleanos
 ## Variables
 
 Las variables son fáciles de entender. Simplemente **señalan valores**.
@@ -92,9 +91,9 @@ hacer algo con una variable en el lado derecho, luego asignar el resultado
 de vuelta a la misma variable en el lado izquierdo.
 
 ```python
->>> un = 1
->>> un = un + 1
->>> un
+>>> a = 1
+>>> a = a + 1
+>>> a
 2
 >>>
 ```
